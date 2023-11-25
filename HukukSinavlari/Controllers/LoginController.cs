@@ -31,7 +31,6 @@ namespace HukukSinavlari.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(UserLoginModel loginModel)
         {
-
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByNameAsync(loginModel.UserName);
@@ -84,7 +83,6 @@ namespace HukukSinavlari.Controllers
             return View();
         }
 
-
         public async Task<IActionResult> GetPassword(string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
@@ -93,7 +91,7 @@ namespace HukukSinavlari.Controllers
                 var password = user.UnencryptedPass;
                 MailMessage msg = new MailMessage(); //Mesaj gövdesini tanımlıyoruz...
                 msg.Subject = "Şifreniz";
-                msg.From = new MailAddress("beoerp00@gmail.com", "Piksel Bilişim");
+                msg.From = new MailAddress("", "");
                 msg.To.Add(new MailAddress(email, user.Name));
                 msg.IsBodyHtml = true;
                 msg.Body = "Şifreniz:" + " " + password;
@@ -101,7 +99,7 @@ namespace HukukSinavlari.Controllers
 
                 //SMTP/Gönderici bilgilerinin yer aldığı erişim/doğrulama bilgileri
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587); //Bu alanda gönderim yapacak hizmetin smtp adresini ve size verilen portu girmelisiniz.
-                NetworkCredential AccountInfo = new NetworkCredential("beoerp00@gmail.com", "zicihvcwnbiiugbw");
+                NetworkCredential AccountInfo = new NetworkCredential("", "");
                 smtp.UseDefaultCredentials = false; //Standart doğrulama kullanılsın mı? -> Yalnızca gönderici özellikle istiyor ise TRUE işaretlenir.
                 smtp.Credentials = AccountInfo;
                 smtp.EnableSsl = true; //SSL kullanılarak mı gönderilsin...
@@ -115,50 +113,6 @@ namespace HukukSinavlari.Controllers
             }
             return Json(email);          
         }
-
-
-
-
-        //[HttpPost]
-        //public async Task<IActionResult> Index(UserLoginModel loginModel, string ReturnUrl = "/")
-        //{              
-
-        //    if (ModelState.IsValid)
-        //    {
-        //        var result = await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, false, true);
-        //        if (result.Succeeded)
-        //        {
-        //            var user = await _userManager.FindByNameAsync(loginModel.UserName);
-        //            var roles = await _userManager.GetRolesAsync(user);
-        //            HttpContext.Session.SetString("userRole", roles.FirstOrDefault());
-
-        //            HttpContext.Session.SetInt32("userId", user.Id);
-        //            HttpContext.Session.SetString("userName", user.UserName);
-
-        //            int? educationId = _http.HttpContext.Session.GetInt32("educationId");
-        //            if (educationId > 0)
-        //            {
-        //                return Redirect("/Payment/Index/" + educationId);
-        //            }
-        //            else
-        //            {
-        //                return Redirect("/Home/Index");
-        //            }
-
-        //        }
-        //        else
-        //        {
-        //            return View();
-        //        }
-        //    }
-
-
-        //    return View();
-        //}
-
-
-
-
 
         public async Task<IActionResult> Logout()
         {
