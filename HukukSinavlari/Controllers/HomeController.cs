@@ -16,11 +16,11 @@ namespace HukukSinavlari.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly DbHukukEgitim _c;
+        private readonly db _c;
         private readonly IpStackLocationService _locationService;
         private readonly EducationManager _educationManager;
        
-        public HomeController(ILogger<HomeController> logger , DbHukukEgitim c , IpStackLocationService locationService , EducationManager educationManager)
+        public HomeController(ILogger<HomeController> logger , db c , IpStackLocationService locationService , EducationManager educationManager)
         {
             _logger = logger;
             _c = c;
@@ -30,15 +30,7 @@ namespace HukukSinavlari.Controllers
 
         public IActionResult Index()
         {
-            //OnlineUser user = new OnlineUser();
-            //var ipAddress = GetClientIpAddress(HttpContext);
-            //var location = GetLocationFromIp(ipAddress);
-            //user.IpAddress = ipAddress;
-            //user.VisitDate = DateTime.Now;
-            //user.Location = location.city.ToString();
-            //_c.onlineUsers.Add(user);
-            //_c.SaveChanges();
-
+        
             var values = _educationManager.TGetList()
                 .Select(x => new EducationListModel
                 {
@@ -74,17 +66,13 @@ namespace HukukSinavlari.Controllers
             return location;
         }
 
-
-
-
-
         [HttpPost]
         public IActionResult SendMail(string ad, string soyad, string gonderenMail, string telNo , string mesaj , string egitim)
         {
             MailMessage msg = new MailMessage(); //Mesaj gövdesini tanımlıyoruz...
             msg.Subject = "Eğitim bilgi talebi";
             msg.From = new MailAddress(gonderenMail, ad + " " + soyad);
-            msg.To.Add(new MailAddress("bilgi@hukuksinavlari.com", "Hukuk eğitimleri"));//bilgi@hukuksinavlari.com
+            msg.To.Add(new MailAddress("", " "));
             //contact@mysardis.com
             msg.IsBodyHtml = true;
             msg.Body = $"<p><strong>Ad:</strong> {ad}</p>" +
@@ -92,14 +80,10 @@ namespace HukukSinavlari.Controllers
             $"<p><strong>Telefon Numarası:</strong> {telNo}</p>" +
             $"<p><strong>Seçilen Eğitim:</strong> {egitim}</p>" +            
             $"<p><strong>Mesaj:</strong> {mesaj}</p>";
-
-
-
             msg.Priority = MailPriority.High;
-
             //SMTP/Gönderici bilgilerinin yer aldığı erişim/doğrulama bilgileri
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587); //Bu alanda gönderim yapacak hizmetin smtp adresini ve size verilen portu girmelisiniz.
-            NetworkCredential AccountInfo = new NetworkCredential("beoerp00@gmail.com", "zicihvcwnbiiugbw");
+            NetworkCredential AccountInfo = new NetworkCredential("", "");
             smtp.UseDefaultCredentials = false; //Standart doğrulama kullanılsın mı? -> Yalnızca gönderici özellikle istiyor ise TRUE işaretlenir.
             smtp.Credentials = AccountInfo;
             smtp.EnableSsl = true; //SSL kullanılarak mı gönderilsin...
