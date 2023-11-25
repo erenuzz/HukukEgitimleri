@@ -1,0 +1,138 @@
+﻿@model UserRegisterModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row justify-content-center h-100 align-items-center">
+        <div class="col-lg-6 col-12">
+            <div class="authincation-content mt-5 mb-5">
+                <div class="row no-gutters">
+                    <div class="col-xl-12">
+                        <div class="auth-form">
+                            <div class="card card_register">
+                                <div class="card-body">
+                                    <img src="~/logo/hukuklogo.png" class="text-center" width="50%" height="auto" />
+                                    <form method="post">
+                                        <div class="form-group">
+                                            <label class="mb-1 text-register"><strong>İsim</strong></label>
+                                            <input type="text" class="form-control" id="isim" name="Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1 text-register"><strong>Soyisim</strong></label>
+                                            <input type="text" id="soyisim" name="Surname" class="form-control">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="mb-1 text-register"><strong>Email</strong></label>
+                                            <input type="email" id="email" name="Mail" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mb-1 text-register"><strong>Adres</strong></label>
+                                            <textarea rows="3" cols="5" id="adres" name="Address" class="form-control"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mb-1 text-register"><strong>Telefon Numarası</strong></label>
+                                            <input type="text" id="telefon" name="Phone" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mb-1 text-register"><strong>Şifre</strong></label>
+                                            <div class="input-group mb-3">
+                                                <input type="password" id="sifre" name="Password" class="form-control">
+                                                <div class="input-group-prepend">
+                                                    <button type="button" id="pass" class="input-group-text"><i id="eye" style="font-size:25px" class="fa fa-eye" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
+
+                                            <div class="form-group">
+                                                <a class="text-register" href="#">Şifremi Unuttum?</a>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-primary btn-text-color btn-block kayit">Kaydol</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="new-account m-3">
+                                    <p class="text-register">Hesabınız var mı? <a class="text-register" href="/Login/Index"> Giriş Yap</a></p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+,
+
+
+<script>
+
+    $("#pass").click(function (e) {
+        if ($("#sifre").attr("type") == "password") {
+            $("#sifre").attr("type", "text")
+
+        }
+        else {
+            $("#sifre").attr("type", "password")
+
+        }
+    })
+
+    $(".kayit").click(function (e) {
+        e.preventDefault();
+        var dataForm = {
+            Name: $("#isim").val(),
+            Surname: $("#soyisim").val(),
+            Mail: $("#email").val(),
+            Phone: $("#telefon").val(),
+            Password: $("#sifre").val(),
+            UserName: $("#email").val(),
+            Address: $("#adres").val()
+        };
+
+        $.ajax({
+            type: 'Post',
+            url: '/Register/Index/',
+            data: dataForm,
+            success: function (res) {
+                Toastify({
+                    text: 'Kaydınız başarılı bir şekilde oluşturuldu.',
+                    duration: 1000,
+                    newWindow: true,
+                    close: true,
+                    position: "right",
+                }).showToast();
+
+                setTimeout(function () {
+                    window.location.href = '/Login/Index';
+                }, 1000);
+            },
+            error: function (error) {
+                Toastify({
+                    text: 'Hata',
+                    duration: 1000,
+                    newWindow: true,
+                    close: true,
+                    position: "right",
+                }).showToast();
+            }
+        })
+    })
+
+</script>

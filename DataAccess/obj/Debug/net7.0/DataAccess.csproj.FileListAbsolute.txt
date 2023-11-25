@@ -1,0 +1,17 @@
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\bin\Debug\net7.0\DataAccess.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\bin\Debug\net7.0\Entity.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\bin\Debug\net7.0\Entity.pdb
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CopyComplete
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll

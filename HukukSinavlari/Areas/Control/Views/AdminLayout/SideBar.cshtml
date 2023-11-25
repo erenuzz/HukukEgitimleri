@@ -1,0 +1,158 @@
+﻿@if (User.IsInRole("Admin"))
+{
+	<div class="deznav">
+		<div class="deznav-scroll">
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="/Control/Panel/Index" class="ai-icon" aria-expanded="false">
+						<i class="flaticon-381-networking"></i>
+						<span class="nav-text">Panel</span>
+					</a>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-user-9"></i>
+						<span class="nav-text">Üyeler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Members/Index">Üye Listesi</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-notepad"></i>
+						<span class="nav-text">Eğitimler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Education/Index">Eğitim Paketleri</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-user"></i>
+						<span class="nav-text">Eğitimciler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Trainer/Index">Eğitimci Listesi</a></li>
+
+					</ul>
+				</li>
+
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="fa fa-money"></i>
+						<span class="nav-text">Ödemeler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/PayApproval/Index">Havale Gelen Ödemeler</a></li>
+
+					</ul>
+				</li>
+
+
+
+			</ul>
+
+			<div class="copyright">
+				<p><strong>Piksel Bilişim</strong> © 2023 Tüm Hakları Saklıdır.</p>
+			</div>
+		</div>
+	</div>
+}
+
+else if (User.IsInRole("Egitmen"))
+{
+	<div class="deznav">
+		<div class="deznav-scroll">
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="/Control/Panel/Index" class="ai-icon" aria-expanded="false">
+						<i class="flaticon-381-networking"></i>
+						<span class="nav-text">Panel</span>
+					</a>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-user-9"></i>
+						<span class="nav-text">Üyeler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Members/Index">Üye Listesi</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-notepad"></i>
+						<span class="nav-text">Derslerim</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Education/TrainerEducation">Ders Listesi</a></li>
+					</ul>
+				</li>
+				
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-notepad"></i>
+						<span class="nav-text">Eğitimler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Education/Index">Eğitim Paketleri</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-user"></i>
+						<span class="nav-text">Eğitimciler</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Trainer/Index">Eğitimci Listesi</a></li>
+
+					</ul>
+				</li>
+
+
+
+			</ul>
+
+			<div class="copyright">
+				<p><strong>Piksel Bilişim</strong> © 2023 Tüm Hakları Saklıdır.</p>
+			</div>
+		</div>
+	</div>
+}
+
+else if (User.IsInRole("Ogrenci"))
+{
+	<div class="deznav">
+		<div class="deznav-scroll">
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="/Control/Panel/Index" class="ai-icon" aria-expanded="false">
+						<i class="flaticon-381-networking"></i>
+						<span class="nav-text">Panel</span>
+					</a>
+				</li>
+				
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class="flaticon-381-notepad"></i>
+						<span class="nav-text">Eğitimlerim</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="/Control/Education/Mytrainings">Satın Aldığım Eğitimler</a></li>
+
+					</ul>
+				</li>
+				
+
+			</ul>
+
+			<div class="copyright">
+				<p><strong>Piksel Bilişim</strong> © 2023 Tüm Hakları Saklıdır.</p>
+			</div>
+		</div>
+	</div>
+}
+

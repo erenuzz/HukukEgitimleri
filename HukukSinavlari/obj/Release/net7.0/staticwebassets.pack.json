@@ -1,0 +1,909 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\HukukSinavlari.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HukukSinavlari.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\duyuru\\DuyuruveHaberler.png",
+      "PackagePath": "staticwebassets\\duyuru\\DuyuruveHaberler.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\egitim\\egitim.png",
+      "PackagePath": "staticwebassets\\egitim\\egitim.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\iletisim\\iletisim.png",
+      "PackagePath": "staticwebassets\\iletisim\\iletisim.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\logo\\WhatsApp Image 2023-10-09 at 11.07.44.jpeg",
+      "PackagePath": "staticwebassets\\logo\\WhatsApp Image 2023-10-09 at 11.07.44.jpeg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\logo\\hukuklogo.png",
+      "PackagePath": "staticwebassets\\logo\\hukuklogo.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\slider\\slider1.png",
+      "PackagePath": "staticwebassets\\slider\\slider1.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\slider\\slider2.png",
+      "PackagePath": "staticwebassets\\slider\\slider2.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\slider\\slider3.png",
+      "PackagePath": "staticwebassets\\slider\\slider3.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\404.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\404.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\READ-ME.txt",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\READ-ME.txt"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\about.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\about.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\contact.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\contact.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\css\\style.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\css\\style.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\feature.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\feature.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\about.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\carousel-3.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\carousel-3.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\feature.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\feature.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\gallery-1.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\gallery-1.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\gallery-2.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\gallery-2.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\gallery-3.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\gallery-3.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\gallery-4.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\gallery-4.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\gallery-5.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\gallery-5.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\gallery-6.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\gallery-6.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\img-600x400-1.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\img-600x400-1.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\img-600x400-2.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\img-600x400-2.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\img-600x400-3.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\img-600x400-3.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\img-600x400-4.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\img-600x400-4.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\img-600x400-5.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\img-600x400-5.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\img-600x400-6.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\img-600x400-6.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\quote.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\quote.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\team-1.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\team-2.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\team-3.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\img\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\img\\testimonial-3.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\index.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\index.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\js\\main.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\js\\main.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\counterup\\counterup.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\counterup\\counterup.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\isotope\\isotope.pkgd.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\isotope\\isotope.pkgd.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\isotope\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\isotope\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\css\\lightbox.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\css\\lightbox.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\css\\lightbox.min.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\css\\lightbox.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\images\\close.png",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\images\\close.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\images\\loading.gif"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\images\\next.png",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\images\\next.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\images\\prev.png",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\images\\prev.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\js\\lightbox.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\js\\lightbox.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\js\\lightbox.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\js\\lightbox.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\lightbox\\links.php",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\lightbox\\links.php"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\project.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\project.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\quote.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\quote.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\renewable-energy-website-template.jpg",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\renewable-energy-website-template.jpg"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\service.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\service.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\team.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\team.html"
+    },
+    {
+      "Id": "D:\\PixelBilisim\\HukukSinavlari\\HukukSinavlari\\HukukSinavlari\\wwwroot\\solartec-1.0.0\\testimonial.html",
+      "PackagePath": "staticwebassets\\solartec-1.0.0\\testimonial.html"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.HukukSinavlari.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.HukukSinavlari.props",
+      "PackagePath": "build\\HukukSinavlari.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.HukukSinavlari.props",
+      "PackagePath": "buildMultiTargeting\\HukukSinavlari.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.HukukSinavlari.props",
+      "PackagePath": "buildTransitive\\HukukSinavlari.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

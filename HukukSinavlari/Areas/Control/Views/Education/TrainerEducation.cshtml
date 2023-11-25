@@ -1,0 +1,160 @@
+﻿@using HukukSinavlari.Areas.Control.Models
+@model (List<TrainerEducationModel> , List<FinishedEducationModel>)
+
+@{
+    ViewData["Title"] = "TrainerEducation";
+    Layout = "~/Areas/Control/Views/Shared/Admin_Layout.cshtml";
+}
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Devam Eden Dersler</button>
+                        <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bitmiş Dersler</button>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="col-lg-6 col-6">
+                        <div class="d-flex justify-content-start">
+                            <div class="card-header">
+                                <h4 class="card-title"><i class="flaticon-381-note"></i> Derslerim </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eğitim Adı</th>
+                                                <th scope="col">Başlangıç Tarihi</th>
+                                                <th scope="col">Görsel</th>
+                                                <th scope="col">Link</th>
+
+
+                                            </tr>
+                                        </thead>
+
+                                        @if (Model.Item1.Count > 0)
+                                        {
+
+                                            <tbody>
+                                                @foreach (var item in Model.Item1)
+                                                {
+
+                                                    <tr>
+
+                                                        <td>@item.EducationName</td>
+                                                        <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                                                        <td>
+                                                            <img src="@item.Image" width="100px" height="auto">
+                                                        </td>
+                                                        <td>
+                                                            @if (item.Link != "")
+                                                            {
+                                                                <span class="badge badge-primary"><a class="text-white" href="/Control/Education/PlayVideo/@item.Id">Eğitimi izle</a></span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge badge-danger">Eğitim linki yüklenmedi</span>
+                                                            }
+                                                        </td>
+
+                                                    </tr>
+
+
+                                                }
+
+                                            </tbody>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-center alert alert-danger">Kayıt bulunamadı</div>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eğitim Adı</th>
+                                                <th scope="col">Başlangıç Tarihi</th>
+                                                <th scope="col">Görsel</th>
+                                                <th scope="col">Link</th>
+
+
+                                            </tr>
+                                        </thead>
+
+                                        @if (Model.Item2.Count > 0)
+                                        {
+
+                                            <tbody>
+                                                @foreach (var item in Model.Item2)
+                                                {
+
+                                                    <tr>
+
+                                                        <td>@item.EducationName</td>
+                                                        <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                                                        <td>
+                                                            <img src="@item.Image" width="100px" height="auto">
+                                                        </td>
+                                                        <td>
+                                                            
+                                                            @if (item.Link != "")
+                                                            {
+                                                                <span class="badge badge-primary"><a class="text-white" href="/Control/Education/PlayVideo/@item.Id">Eğitimi izle</a></span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge badge-danger">Eğitim linki yüklenmedi</span>
+                                                            }
+                                                        </td>
+
+                                                    </tr>
+
+
+                                                }
+
+                                            </tbody>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-center alert alert-danger">Kayıt bulunamadı</div>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+</div>

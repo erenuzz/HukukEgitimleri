@@ -1,0 +1,184 @@
+﻿@using HukukSinavlari.Areas.Control.Models
+@model EducationListModel
+@{
+    ViewData["Title"] = "TrainingHours";
+    Layout = "~/Areas/Control/Views/Shared/Admin_Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-12">
+
+
+
+            <div style="width:100%;" id="calendar"></div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Seçiminiz</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" class="form-group">
+                                <div class="form-group">
+                                    <label id="baslik"></label>
+
+                                    <label>Başlangıç Tarihi:</label>
+                                    <input type="text" name="StartDate" class="text-dark form-control mb-2" id="baslangic" />
+
+                                    <label>Bitiş Tarihi:</label>
+                                    <input type="text" name="EndDate" class="text-dark form-control mb-2" id="bitis" />
+
+                                    <input type="hidden" name="Id" id="educationId" value="@Model.Id" />
+
+                                </div>
+                                <div class="form-group">
+                                    <textarea rows="3" cols="9" id="aciklama" required name="Description" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Eğitim Linki</label>
+                                    <input type="text" class="form-control" name="Link" id="link" />
+                                </div>
+                                <button type="button" id="kayit" class="btn btn-primary">Kaydet</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: 'Get',
+            url: '/Control/Education/TrainingHoursControl',
+            data: { educationId: @Model.Id},            
+            success: function (res) {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'timeGridDay',
+                    slotDuration: '00:30:00',
+                    slotLabelFormat: {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                    },
+                    selectable: true,
+                    selectAllow: function (selectInfo) {
+                        var currentTime = new Date(); // Anlık zamanı al
+                        var currentHour = currentTime.getHours(); // Saati al
+                        var selectedHour = selectInfo.start.getHours(); // Seçilen saat
+                        return selectInfo.start > currentTime || (selectInfo.start.getDate() === currentTime.getDate() && selectedHour > currentHour); // Sadece anlık tarih ve saatten sonraki saatler seçilebilir
+                    },
+                    select: function (info) {
+                        var selectedStart = info.start;
+                        var selectedEnd = info.end;
+                        var startDate = selectedStart.toLocaleDateString();
+                        var endDate = selectedEnd.toLocaleDateString();
+                        var startTime = selectedStart.getHours() + ":00";
+                        var endTime = selectedEnd.getHours() + ":00";
+
+
+                        $("#baslangic").val(startDate + " " + startTime);
+                        $("#bitis").val(endDate + " " + endTime);
+                        $('#myModal').modal('show');
+                    },
+                                       
+
+                    events: function (fetchInfo, successCallback, failureCallback) {
+                        var events = [];
+                        for (var i = 0; i < res.length; i++) {
+                            var reservation = res[i];
+                            console.log(reservation);
+                            var event = {
+                                title:"Eğitime katılmak için lütfen tıklayın."  ,
+                                start: reservation.startDate,
+                                end: reservation.endDate, // 1 saatlik etkinlik
+                                tooltip: 'Reservation Details: '
+                            };
+                            events.push(event);
+                        }
+                        successCallback(events);
+                    },
+
+                    eventClick: function (info) {
+                        for (var i = 0; i < res.length; i++) {
+                            var reservation = res[i];
+                            toastr.options = {
+                               // positionClass: 'toast-center',
+                                'positionClass': 'toast-top-center',
+                                timeOut: 0,
+                                extendedTimeOut: 0,
+                                closeButton: true,
+                                toastClass: 'custom-toast-class', // Apply a custom CSS class
+                                onclick: function () {
+                                    window.location.href = reservation.link;
+                                }
+                            };
+                            toastr.success('Eğitime katıl');
+                        }
+                    },
+
+
+
+
+
+
+
+                    locale: 'tr',
+                    buttonText: {
+                        today: 'Bugün',
+                        month: 'Ay',
+                        week: 'Hafta',
+                        day: 'Gün',
+                        list: 'Liste'
+                    },
+                    allDayText: 'Tüm gün',
+                    firstDay: 1,
+                });
+                calendar.render();
+            }
+
+
+
+        })
+    })
+
+
+    $("#kayit").click(function (e) {
+        if ($("#aciklama").val() != '') {
+            e.preventDefault();
+            var formData = {
+                StartDate: $("#baslangic").val(),
+                EndDate: $("#bitis").val(),
+                Description: $("#aciklama").val(),
+                Id: $("#educationId").val(),
+                Link:$("#link").val()
+            };
+            $.ajax({
+                type: 'Post',
+                url: '/Control/Education/TrainingHours',
+                data: formData,
+                success: function (res) {
+                    toastr.success('Ders saatleri oluşturuldu.', 'Lütfen bekleyin...')
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 2000);
+                }
+            })
+        }
+        else {
+            toastr.error('Açıklama alanı boş bırakılamaz.', '')
+        }
+    })
+
+</script>

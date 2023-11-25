@@ -1,0 +1,14 @@
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\bin\Release\net7.0\Entity.deps.json
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\bin\Release\net7.0\Entity.runtimeconfig.json
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\bin\Release\net7.0\Entity.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\bin\Release\net7.0\Entity.pdb
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.csproj.AssemblyReference.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.AssemblyInfoInputs.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.AssemblyInfo.cs
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.csproj.CoreCompileInputs.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\refint\Entity.dll
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.pdb
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\Entity.genruntimeconfig.cache
+D:\PixelBilisim\HukukSinavlari\HukukSinavlari\Entity\obj\Release\net7.0\ref\Entity.dll

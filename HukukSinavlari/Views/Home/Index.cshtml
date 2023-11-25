@@ -1,0 +1,231 @@
+﻿@using HukukSinavlari.Areas.Control.Models
+@model List<EducationListModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+<div id="anasayfa" class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="owl-carousel header-carousel position-relative">
+
+        <div class="owl-carousel-item position-relative" data-dot="<img src='/slider/slider3.png'>">
+            <img class="img-fluid" src="~/slider/slider3.png" alt="">
+            <div class="owl-carousel-inner">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h1 class="display-2 text-white animated slideInDown">Hukuk Sınavları</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-3">Hukuk sınavlarında en iyi derecelere girmek için bizi tercih edin.</p>
+                            <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ön kayıt için tıklayın</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="owl-carousel-item position-relative" data-dot="<img src='/slider/slider1.png'>">
+            <img class="img-fluid" src="~/slider/slider1.png" alt="">
+            @* <div class="owl-carousel-inner">
+            <div class="container">
+            <div class="row justify-content-start">
+            <div class="col-10 col-lg-8">
+            <h1 class="display-2 text-white animated slideInDown">Hukuk Sınavları</h1>
+            <p class="fs-5 fw-medium text-white mb-4 pb-3">Hukuk sınavlarında en iyi derecelere girmek için bizi tercih edin.</p>
+            <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">İletişim</a>
+            </div>
+            </div>
+            </div>
+            </div>*@
+        </div>
+        <div class="owl-carousel-item position-relative" data-dot="<img src='/slider/slider2.png'>">
+            <img class="img-fluid" src="~/slider/slider2.png" alt="">
+            @* <div class="owl-carousel-inner">
+            <div class="container">
+            <div class="row justify-content-start">
+            <div class="col-10 col-lg-8">
+            <h1 class="display-2 text-white animated slideInDown">Pioneers Of Solar And Renewable Energy</h1>
+            <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+            <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a>
+            </div>
+            </div>
+            </div>
+            </div>*@
+        </div>
+
+    </div>
+</div>
+
+<div id="egitim" class="container-xxl py-5">
+    <div class="container">
+
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded overflow-hidden">
+                        <img class="img-fluid" src="@item.Image" alt="">
+                        <div class="position-relative p-4 pt-0">
+                            <div class="service-icon">
+                                <i class="fa fa-book fa-3x"></i>
+                            </div>
+                            <h4 class="mb-3">@item.EducationName</h4>
+                            <p>@item.Description</p>
+                            <a class="small fw-medium" href="/EducationDetail/Index/@item.Id">İncele<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+<div id="duyuru" class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            @*<h6 class="text-primary">Duyurular ve Haberler</h6>*@
+            <h3 class="mb-4">Duyurular ve Haberler</h3>
+        </div>
+
+        <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="portfolio-img rounded overflow-hidden">
+                    <img class="img-fluid" src="~/duyuru/DuyuruveHaberler.png" alt="">
+                </div>
+                <div class="pt-3">
+                    <p class="text-primary mb-0">Duyuru</p>
+                    <hr class="text-primary w-25 my-2">
+                    <h5 class="lh-base">Deneme Duyuru</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="portfolio-img rounded overflow-hidden">
+                    <img class="img-fluid" src="~/duyuru/DuyuruveHaberler.png" alt="">
+                </div>
+                <div class="pt-3">
+                    <p class="text-primary mb-0">Duyuru</p>
+                    <hr class="text-primary w-25 my-2">
+                    <h5 class="lh-base">Deneme Duyuru</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="portfolio-img rounded overflow-hidden">
+                    <img class="img-fluid" src="~/duyuru/DuyuruveHaberler.png" alt="">
+                </div>
+                <div class="pt-3">
+                    <p class="text-primary mb-0">Duyuru</p>
+                    <hr class="text-primary w-25 my-2">
+                    <h5 class="lh-base">Deneme Duyuru</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="iletisim" class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container quote px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="~/iletisim/iletisim.png" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <h1 class="mb-4">Ön Kayıt</h1>
+
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control border-0" name="ad" id="ad" placeholder="İsminiz" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control border-0" name="soyad" id="soyad" placeholder="Soy isminiz" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control border-0" name="gonderenMail" id="gonderenMail" placeholder="Email adresiniz" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control border-0" name="telNo" id="telNo" placeholder="Telefon numaranız" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-lg-12">
+                                <select class="form-select" name="egitim" id="egitimSec" style="height:55px; color:#9B9B9B;" aria-label="">
+                                    <option selected>Eğitim (Ön kayıt olacağınız eğitim)</option>
+                                    <option value="Hukuk mesleklerine giriş sınavına hazırlık kursu">Hukuk mesleklerine giriş sınavına hazırlık kursu</option>
+                                    <option value="Adli hakimlik kursu">Adli hakimlik kursu</option>
+                                    <option value="İdari hakimlik kursu">İdari hakimlik kursu</option>
+                                    <option value="İcra müdürlüğü kursu">İcra müdürlüğü kursu</option>
+                                    <option value="Avukatlık mesleki kursları">Avukatlık mesleki kursları</option>
+                                    <option value="Aile hukuku">Aile hukuku</option>
+                                    <option value="Miras hukuku">Miras hukuku</option>
+                                    <option value="Mal davaları hukuku">Mal davaları hukuku</option>
+                                    <option value="Ceza davaları hukuku">Ceza davaları hukuku</option>
+                                    <option value="Sertifika eğitimleri">Sertifika eğitimleri</option>
+                                    <option value="Hukuk seminerleri">Hukuk seminerleri</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <textarea class="form-control" placeholder="Mesajınız" id="mesaj" name="mesaj"></textarea>
+                            </div>
+
+
+                            <div class="col-12">
+                                <button class="btn btn-primary rounded-pill py-3 px-5 mail" type="submit">Gönder</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+    $(document).ready(function () {
+
+
+        $(".mail").click(function (e) {
+            e.preventDefault();
+            var dataForm = {
+                ad: $("#ad").val(),
+                soyad: $("#soyad").val(),
+                gonderenMail: $("#gonderenMail").val(),
+                telNo: $("#telNo").val(),
+                mesaj: $("#mesaj").val(),
+                egitim: $("#egitimSec").val()
+            };
+
+            $.ajax({
+                type: 'Post',
+                url: '/Home/SendMail',
+                data: dataForm,
+                success: function (res) {
+                    Toastify({
+                        text: "Mesajınız başarılı bir şekilde gönderildi",
+                        duration: 2000,
+                        newWindow: true,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        style: {
+                            background: "#51CC82",
+                            color: "black"
+                        },
+                        onClick: function () { } // Callback after click
+                    }).showToast();
+                }
+            })
+        })
+    })
+</script>

@@ -1,0 +1,259 @@
+﻿@using HukukSinavlari.Areas.Control.Models
+@model (List<PurchasedEducationModel> , List<CanceledEducationModel>)
+@{
+    ViewData["Title"] = "Mytrainings";
+    Layout = "~/Areas/Control/Views/Shared/Admin_Layout.cshtml";
+}
+
+<style>
+    .btn_ {
+        position: relative;
+    }
+
+        .btn_:hover::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            z-index: 1;
+            opacity: 0.9;
+            display: block;
+        }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Devam Eden Eğitimler</button>
+                        <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">İptal Edilen Eğitimler</button>
+                    </div>
+                </nav>
+
+                <div class="row">
+                    <div class="col-lg-6 col-6">
+                        <div class="d-flex justify-content-start">
+                            <div class="card-header">
+                                <h4 class="card-title"><i class="flaticon-381-note"></i> Eğitimlerim </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eğitim Adı</th>
+                                                <th scope="col">Başlangıç Tarihi</th>
+                                                <th scope="col">Eğitim Durumu</th>
+                                                <th scope="col">Ödeme Durumu</th>
+
+                                                <th scope="col">İşlemler</th>
+                                            </tr>
+                                        </thead>
+
+                                        @if (Model.Item1.Count > 0)
+                                        {
+                                            <tbody>
+                                                @foreach (var item in Model.Item1)
+                                                {
+                                                    <tr>
+                                                        <td>@item.EducationName</td>
+                                                        <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                                                        <td>
+                                                            @if (item.EducationStatus == true)
+                                                            {
+                                                                <span class="badge badge-success">Aktif Eğitim</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge badge-danger">Pasif Eğitim</span>
+                                                            }
+
+                                                        </td>
+                                                        <td>
+                                                            @if (item.PaymentStatus == true)
+                                                            {
+                                                                <span class="badge badge-success">Ödendi</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge badge-danger">Ödenmedi</span>
+                                                            }
+
+                                                        </td>
+
+
+
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <a href="/Control/Education/PlayVideo/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Dersi İzle"><i class="fa fa-play"></i></a>
+
+                                                                <a href="#" data-target="#iptalet_@item.Id" data-toggle="modal" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Eğitimi İptal Et"><i class="fa fa-money"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                }
+
+                                            </tbody>
+                                        }
+                                        else
+
+
+                                        {
+                                            <div class="text-center alert alert-danger">Kayıt bulunamadı</div>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eğitim Adı</th>
+                                                <th scope="col">Başlangıç Tarihi</th>
+                                                <th scope="col">Eğitim Durumu</th>
+                                                <th scope="col">Ödeme Durumu</th>
+
+                                                <th scope="col">İşlemler</th>
+                                            </tr>
+                                        </thead>
+
+                                        @if (Model.Item2.Count > 0)
+                                        {
+                                            <tbody>
+                                                @foreach (var item in Model.Item2)
+                                                {
+                                                    <tr>
+                                                        <td>@item.EducationName</td>
+                                                        <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                                                        <td>
+                                                            @if (item.EducationStatus == true && item.CanceledTrainings == false)
+                                                            {
+                                                                <span class="badge badge-success">Aktif Eğitim</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge badge-danger">Pasif Eğitim</span>
+                                                            }
+
+                                                        </td>
+                                                        <td>
+                                                            @if (item.PaymentStatus == true && item.CanceledTrainings == false)
+                                                            {
+                                                                <span class="badge badge-success">Ödendi</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="badge badge-danger">Ödenmedi</span>
+                                                            }
+
+                                                        </td>
+
+
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <a href="/Control/Education/PlayVideo/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Dersi İzle"><i class="fa fa-play"></i></a>
+
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                }
+
+                                            </tbody>
+                                        }
+                                        else
+
+
+                                        {
+                                            <div class="text-center alert alert-danger">Kayıt bulunamadı</div>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@foreach (var item in Model.Item1)
+{
+    <div class="modal fade" id="iptalet_@item.Id" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Eğitimi İptal Et</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Eğitimi iptal edip ödemenizi geri almak isteidğinize emin misiniz ?</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hayır</button>
+                    <a data-iptal="@item.Id" class="btn btn-primary iptal">Evet</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $(".iptal").click(function(e){
+            e.preventDefault();
+            var id = $(this).attr("data-iptal");
+            $.ajax({
+                type:'Post',
+                url: '/Control/Education/CanceledEducation',
+                data:{id:id},
+                success:function(res){
+                    toastr.success('Eğitim başarılı bir şekilde iptal edildi.', '')
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                }
+            })
+        })
+    })
+</script>

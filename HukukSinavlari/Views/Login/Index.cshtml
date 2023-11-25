@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content mt-5 mb-5">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="card card_login">
+                                    <div class="card-body">
+                                        <img src="~/logo/hukuklogo.png" class="text-center" width="50%" height="auto" />
+                                        @if (ViewBag.error != null)
+                                        {
+                                            <div class="alert alert-danger">
+                                                @ViewBag.error
+                                            </div>
+                                        }
+                                        @if (ViewBag.kullanici != null)
+                                        {
+                                            <div class="alert alert-danger">
+                                                @ViewBag.kullanici
+                                            </div>
+                                        }
+                                        <form action="/Login/Index" method="post">
+                                            <div class="form-group">
+                                                <label class="mb-1 text-register"><strong>Email</strong></label>
+                                                <input type="text" class="form-control" id="username" name="UserName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="mb-1 text-register"><strong>Şifre</strong></label>
+
+                                                <div class="input-group mb-3">
+                                                    <input type="password" id="sifre" name="Password" class="form-control">
+                                                    <div class="input-group-prepend">
+                                                        <button type="button" id="pass" class="input-group-text"><i id="eye" style="font-size:25px" class="fa fa-eye" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center mt-4">
+                                                <button type="submit" class="btn btn-dark btn-text-color btn-block giris">Giriş Yap</button>
+                                            </div>
+
+                                        </form>
+                                        <div class="new-account mt-3">
+                                            <p class="text-register">Üye Değil misiniz? <a class="text-register" href="/Register/Index">Hemen kaydolun</a></p>
+                                            <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                               Şifremi unuttum
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+           Şifreni öğrenmek için lütfen e-posta adresini gir
+        </div>
+        <form>
+            <div class="form-group mb-3 mt-3">
+                <input type="email" class="form-control" name="email" id="email" />
+            </div>           
+        </form>
+
+        <button type="button" class="btn btn-dark sifre_bul w-100">Şifremi Bul</button>
+
+        <img src="~/iletisim/sifreunuttum.png" class="img-fluid mt-3" />
+    </div>
+</div>
+
+@*<div class="modal fade" id="sifre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Şifre Öğrenme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark sifre_bul">Şifremi Bul</button>
+            </div>
+        </div>
+    </div>
+</div>
+*@
+
+<script>
+    $(document).ready(function () {
+        $("#pass").click(function (e) {
+            if ($("#sifre").attr("type") == "password") {
+                $("#sifre").attr("type", "text")
+
+            }
+            else {
+                $("#sifre").attr("type", "password")
+
+            }
+        })
+
+
+        $(".sifre_bul").click(function (e) {
+            e.preventDefault();
+            var email = $("#email").val();
+            $.ajax({
+                type: 'Post',
+                url: '/Login/GetPassword/',
+                data: { email: email },
+                success: function (res) {
+
+                    if(!res.message){
+                        Toastify({
+                            text: 'Şifreniz email adresinize gönderildi.',
+                            duration: 1500,
+                            newWindow: true,
+                            close: true,
+                            position: "right",
+                        }).showToast();
+
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 1500);
+                    }
+                    else{
+                        Toastify({
+                            text: 'Böyle bir kullanıcı bulunamadı.',
+                            duration: 1500,
+                            newWindow: true,
+                            close: true,
+                            position: "right",
+                        }).showToast();
+
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 1500);
+                    }
+                   
+
+                }
+            })
+        })
+
+    })
+</script>
+
+
+
+

@@ -1,0 +1,121 @@
+﻿@using HukukSinavlari.Models
+@model EducationDetailModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 col-12 mb-3">
+            <div class="card card_bg">
+                <div class="card-body">
+                    <h3 style="color:#555555" class="text-center mb-4">@Model.EducationName</h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="d-block">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <h6 style="color:#555555" class=""><i style="color:#32C36C" class="fa fa-globe"></i> Online Eğitim</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="d-block">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <h6 style="color:#555555" class=""><i style="color:#32C36C" class="fa fa-mobile"></i> Web,Tablet ve Cep'ten erişilebilir</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p><b style="color:#555555">Açıklama:</b> @Model.Description</p>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                    <div class="row">
+                        <p><b style="color:#555555">Eğitim Detayları:</b></p>
+
+
+                        <ul class="li-item list-group">
+                            <li class="list-group-item"><i style="color:#32C36C" class="fa fa-calendar"></i><b style="color:#555555"> Başlangıç Tarihi:</b>  @Model.StartDate.ToString("dd.MM.yyyy")</li>
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card card_bg">
+                <div class="card-body">
+                    <img style="border-radius:15px" class="img-fluid" src="@Model.Image" />
+                    <div class="row mt-3 mb-3">
+                        <div class="col-lg-6 col-12 mb-2">
+                            <div class="d-flex justify-content-start">
+                                <h4> @Model.EducationName</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-2">
+                            <div class="d-flex justify-content-end">
+                                <h4> @Model.Price.ToString("0") TL</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <small class="mt-2 mb-2" style="color:#555555">Deneyimli eğitmenlerimiz sizlere en güncel bilgileri sunar. Pratik örnekler ve ders notları ile hukuk alanında ustalaşmanıza yardımcı olurlar.</small>
+                    </div>
+
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        
+                        <div class="row mt-2 mb-2">
+                            <a href="/Login/Index/" class="btn btn-primary satinAl">
+                                Satın al
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row mt-2 mb-2">
+                            <a href="/Payment/Index/@Model.Id" class="btn btn-primary">
+                                Satın al
+                            </a>
+                        </div>
+                    }
+
+
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $(".satinAl").click(function(e){
+            $.ajax({
+                type:'Post',
+                url: "/EducationDetail/AddSessionEducation",
+                data : {id : @Model.Id},
+                success:function(res){
+                    console.log("writed");
+                }                
+            })
+        })
+    })
+</script>
+
+

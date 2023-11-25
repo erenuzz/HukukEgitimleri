@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Control/Views/Shared/Admin_Layout.cshtml";
+}
+
+@if (User.IsInRole("Admin"))
+{
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-6 col-xxl-12">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card avtivity-card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="activity-icon bgl-primary mr-md-4 mr-3">
+										<i style="font-size: 25px;font-weight: bold;" class="text-primary flaticon-381-user-9"></i>
+									</span>
+									<div class="media-body">
+										<p class="fs-18 mb-2">Üyeler</p>
+										<span id="uyeler" class="title text-black font-w600">-</span>
+									</div>
+								</div>
+								<div class="progress" style="height:5px;">
+									<div class="progress-bar bg-primary" style="width: 42%; height:5px;" role="progressbar">
+										<span class="sr-only">42 Complete</span>
+									</div>
+								</div>
+							</div>
+							<div class="effect bg-primary"></div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="card avtivity-card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="activity-icon bgl-primary  mr-md-4 mr-3">
+										<i style="font-size: 25px;font-weight: bold;" class="text-primary flaticon-381-notepad"></i>
+									</span>
+									<div class="media-body">
+										<p class="fs-18 mb-2">Eğitimler</p>
+										<span id="egitim" class="title text-black font-w600">-</span>
+									</div>
+								</div>
+								<div class="progress" style="height:5px;">
+									<div class="progress-bar bg-primary" style="width: 82%; height:5px;" role="progressbar">
+										<span class="sr-only">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="effect bg-primary"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+}
+
+@if (User.IsInRole("Egitmen"))
+{
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-6 col-xxl-12">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card avtivity-card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="activity-icon bgl-primary mr-md-4 mr-3">
+										<i style="font-size: 25px;font-weight: bold;" class="text-primary flaticon-381-user-9"></i>
+									</span>
+									<div class="media-body">
+										<p class="fs-18 mb-2">Üyeler</p>
+										<span id="uyeler" class="title text-black font-w600">-</span>
+									</div>
+								</div>
+								<div class="progress" style="height:5px;">
+									<div class="progress-bar bg-primary" style="width: 42%; height:5px;" role="progressbar">
+										<span class="sr-only">42 Complete</span>
+									</div>
+								</div>
+							</div>
+							<div class="effect bg-primary"></div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="card avtivity-card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="activity-icon bgl-primary  mr-md-4 mr-3">
+										<i style="font-size: 25px;font-weight: bold;" class="text-primary flaticon-381-notepad"></i>
+									</span>
+									<div class="media-body">
+										<p class="fs-18 mb-2">Derslerim</p>
+										<span id="derslerim" class="title text-black font-w600">-</span>
+									</div>
+								</div>
+								<div class="progress" style="height:5px;">
+									<div class="progress-bar bg-primary" style="width: 82%; height:5px;" role="progressbar">
+										<span class="sr-only">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="effect bg-primary"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+}
+
+@if (User.IsInRole("Ogrenci"))
+{
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-6 col-xxl-12">
+				<div class="row">					
+					<div class="col-sm-6">
+						<div class="card avtivity-card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="activity-icon bgl-primary  mr-md-4 mr-3">
+										<i style="font-size: 25px;font-weight: bold;" class="text-primary flaticon-381-notepad"></i>
+									</span>
+									<div class="media-body">
+										<p class="fs-18 mb-2">Derslerim</p>
+										<span id="satinAldigim" class="title text-black font-w600">-</span>
+									</div>
+								</div>
+								<div class="progress" style="height:5px;">
+									<div class="progress-bar bg-primary" style="width: 82%; height:5px;" role="progressbar">
+										<span class="sr-only">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="effect bg-primary"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+}
+<script src="~/sc/Panel.js"></script>
+

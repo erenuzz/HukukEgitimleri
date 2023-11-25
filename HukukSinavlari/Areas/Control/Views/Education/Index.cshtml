@@ -1,0 +1,747 @@
+﻿@using HukukSinavlari.Areas.Control.Models
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@model (IPagedList<EducationListModel> , IPagedList<EducationListModelFinished>)
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Control/Views/Shared/Admin_Layout.cshtml";
+
+}
+
+<style>
+    .btn_ {
+        position: relative;
+    }
+
+        .btn_:hover::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            z-index: 1;
+            opacity: 0.9;
+            display: block;
+        }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Devam Eden Eğitimler</button>
+                        <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Biten Eğitimler</button>
+                    </div>
+                </nav>
+
+                <div class="row">
+                    <div class="col-lg-6 col-6">
+                        <div class="d-flex justify-content-start">
+                            <div class="card-header">
+                                <h4 class="card-title"><i class="flaticon-381-note"></i> Eğitimler </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-6">
+                        <div class="d-flex justify-content-end">
+                            <div class="card-header">
+                                <button type="button" class="btn btn-primary" data-target="#yeniekle" data-toggle="modal"><i class="fa fa-plus"></i> Yeni eğitim ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eğitim Adı</th>
+                                                <th scope="col">Başlangıç Tarihi</th>
+                                                <th scope="col">Fiyat</th>
+                                                <th scope="col">Görsel</th>
+                                                <th scope="col">İşlemler</th>
+                                            </tr>
+                                        </thead>
+
+                                        @if (Model.Item1.Count > 0)
+                                        {
+
+                                            <tbody>
+                                                @foreach (var item in Model.Item1)
+                                                {
+
+                                                    <tr>
+
+                                                        <td>@item.EducationName</td>
+                                                        <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                                                        <td>@item.Price ₺</td>
+                                                        <td>
+                                                            <img src="@item.Image" width="100px" height="auto">
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <a href="#" data-toggle="modal" data-target="#edit_@item.Id" data-editId="@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1 editToggle" data-tooltip="Düzenle"><i class="fa fa-pencil"></i></a>
+
+                                                                <a href="/Control/Education/PlayVideo/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Dersi İzle"><i class="fa fa-play"></i></a>
+
+                                                                <a href="/Control/Education/Delete/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Silme"><i class="fa fa-trash"></i></a>
+
+                                                                <a href="#" data-toggle="modal" data-id="@item.Id" data-target="#katilimci_@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp user mr-1" data-tooltip="Katılımcılar"><i class="fa fa-users"></i></a>
+
+                                                                <a href="#" data-toggle="modal" data-egitmenid="@item.Id" data-target="#egitimci_@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp useregitmen mr-1" data-tooltip="Eğitimciler"><i class="fa fa-user"></i></a>
+
+                                                                <a href="/Control/Education/TrainingHours/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Ders Programı"><i class="fa fa-calendar"></i></a>
+
+                                                                <a href="#" data-toggle="modal" data-target="#finished_@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp" data-tooltip="Eğitimi Bitir"><i class="fa fa-check-square"></i></a>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                }
+
+                                            </tbody>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-center alert alert-danger">Kayıt bulunamadı</div>
+                                        }
+
+                                    </table>
+                                    <div class="pull-right ml-3">
+
+                                        @Html.PagedListPager((IPagedList)Model.Item1,
+                                        page => Url.Action("Education", "Control", new { page }),
+                                        new PagedListRenderOptions
+                                        {
+                                        LiElementClasses = new string[] { "page-item" },
+                                        PageClasses = new string[] { "page-link" },
+                                        Display = PagedListDisplayMode.IfNeeded
+                                        })
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eğitim Adı</th>
+                                                <th scope="col">Başlangıç Tarihi</th>
+                                                <th scope="col">Fiyat</th>
+                                                <th scope="col">Görsel</th>
+                                                <th scope="col">İşlemler</th>
+                                            </tr>
+                                        </thead>
+
+                                        @if (Model.Item2.Count > 0)
+                                        {
+
+                                            <tbody>
+                                                @foreach (var item in Model.Item2)
+                                                {
+
+                                                    <tr>
+
+                                                        <td>@item.EducationName</td>
+                                                        <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                                                        <td>@item.Price ₺</td>
+                                                        <td>
+                                                            <img src="@item.Image" width="100px" height="auto">
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                @if (item.Status == false)
+                                                                {
+                                                                    <a href="#" hidden data-toggle="modal" data-target="#edit_@item.Id" data-editId="@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1 editToggle" data-tooltip="Düzenle"><i class="fa fa-pencil"></i></a>
+                                                                }
+                                                               
+
+                                                                <a href="/Control/Education/PlayVideo/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Dersi İzle"><i class="fa fa-play"></i></a>
+
+                                                                @if(item.Status == false)
+                                                                {
+                                                                    <a hidden href="/Control/Education/Delete/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Silme"><i class="fa fa-trash"></i></a>
+                                                                }
+
+                                                               
+                                                                <a href="#" data-toggle="modal" data-id="@item.Id" data-target="#katilimci_@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp user mr-1" data-tooltip="Katılımcılar"><i class="fa fa-users"></i></a>
+
+                                                                <a href="#" data-toggle="modal" data-egitmenid="@item.Id" data-target="#egitimci_@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp useregitmen mr-1" data-tooltip="Eğitimciler"><i class="fa fa-user"></i></a>
+
+                                                                @if(item.Status == false)
+                                                                {
+                                                                    <a hidden href="/Control/Education/TrainingHours/@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp mr-1" data-tooltip="Ders Programı"><i class="fa fa-calendar"></i></a>
+                                                                }
+
+
+                                                                @if(item.Status == false)
+                                                                {
+                                                                    <a hidden href="#" data-toggle="modal" data-target="#finished_@item.Id" class="btn btn-primary btn_ shadow btn-xs sharp" data-tooltip="Eğitimi Bitir"><i class="fa fa-check-square"></i></a>
+                                                                }
+                                                               
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                }
+
+                                            </tbody>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-center alert alert-danger">Kayıt bulunamadı</div>
+                                        }
+
+                                    </table>
+                                    <div class="pull-right ml-3">
+
+                                        @Html.PagedListPager((IPagedList)Model.Item2,
+                                        page => Url.Action("Education", "Control", new { page }),
+                                        new PagedListRenderOptions
+                                        {
+                                        LiElementClasses = new string[] { "page-item" },
+                                        PageClasses = new string[] { "page-link" },
+                                        Display = PagedListDisplayMode.IfNeeded
+                                        })
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="yeniekle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Yeni eğitim ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group">
+                                <label>Eğitim Adı</label>
+                                <input type="text" name="EducationName" id="egitimAdi" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Başlangıç Tarihi</label>
+                                <input type="date" name="StartDate" id="baslangicTarihi" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Eğitim Görseli</label>
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" name="Image" id="image">
+                                </div>
+                                <div id="approved"></div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+
+                            <div class="form-group">
+                                <label>Eğitim Fiyatı</label>
+                                <input type="text" name="Price" id="fiyat" class="form-control" />
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Eğitmen</label>
+                                <select class="form-control egitmen" data-live-search="true" name="trainerId[]" multiple>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Eğitim Açıklaması</label>
+                                <textarea rows="3" cols="3" name="Description" id="aciklama" class="form-control"></textarea>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary kaydet">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@foreach (var item in Model.Item1)
+{
+    <div class="modal fade" id="edit_@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eğitim Düzenleme</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <input type="hidden" id="id_@item.Id" name="Id">
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Eğitim Adı</label>
+                                    <input type="text" name="EducationName" value="@item.EducationName" id="egitimAdi_@item.Id" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Başlangıç Tarihi</label>
+                                    <input type="date" name="StartDate" value="@item.StartDate.ToString("yyyy-MM-dd")" id="baslangicTarihi_@item.Id" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Eğitim Görseli</label>
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" value="@item.Image" name="Image" id="image_@item.Id">
+                                    </div>
+                                    <div id="approved"></div>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Eğitim Fiyatı</label>
+                                    <input type="text" name="Price" value="@item.Price" id="fiyat_@item.Id" class="form-control" />
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Eğitmen</label>
+                                    <select class="form-control egitmen" data-live-search="true" name="trainerIdd[]" multiple>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Eğitim Açıklaması</label>
+                                    <textarea rows="3" cols="3" name="Description" id="aciklama_@item.Id" class="form-control">@item.Description</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+                    <a data-edit="@item.Id" class="btn btn-primary edit">Kaydet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@foreach (var item in Model.Item1)
+{
+    <div class="modal fade" id="katilimci_@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Katılımcılar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="ogrenci_@item.Id" class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                        <thead>
+                        </thead>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@foreach (var item in Model.Item1)
+{
+    <div class="modal fade" id="egitimci_@item.Id" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Eğitimciler</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="egitimcii_@item.Id" class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                        <thead>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@foreach (var item in Model.Item1)
+{
+    <div class="modal fade" id="finished_@item.Id" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Eğitimi Sonlandır</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <p>Eğitimi sonlandırmak istediğinize emin misiniz ?</p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hayır</button>
+                    <a data-finis="@item.Id" class="btn btn-primary sonlandir">Evet</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@foreach (var item in Model.Item2)
+{
+    <div class="modal fade" id="egitimci_@item.Id" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Eğitimciler</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="egitimcii_@item.Id" class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                        <thead>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@foreach (var item in Model.Item2)
+{
+    <div class="modal fade" id="katilimci_@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Katılımcılar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="ogrenci_@item.Id" class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                        <thead>
+                        </thead>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#image").change(function () {
+            var input = document.getElementById('image');
+            if (input.files.length > 0) {
+                var file = input.files[0];
+                if (file) {
+                    var img = new Image();
+                    img.src = window.URL.createObjectURL(file);
+                    img.onload = function () {
+                        if (img.width === 600 && img.height === 400) {
+                            $("#approved").addClass("badge badge-success").text("Resim seçildi ✓");
+
+                        } else {
+                            toastr.error('Resim boyutu 600x400 piksel boyutunda olmalıdır.', '')
+                            input.value = '';
+                        }
+                    };
+                }
+            }
+        })
+
+        $.ajax({
+            type: 'Get',
+            url: '/Control/Education/TrainerList',
+            success: function (res) {
+                console.log(res);
+                let selectElement = $('select[name="trainerId[]"]');
+                for (let i = 0; i < res.length; i++) {
+                    console.log(res[i]);
+                    let egitmenId = res[i].id;
+                    let egitmenAdi = res[i].name + " " + res[i].surname;
+                    let optionElement = $('<option></option>').attr('value', egitmenId).text(egitmenAdi);
+                    selectElement.append(optionElement);
+
+                }
+
+                selectElement.selectpicker({
+                    noneSelectedText: 'Eğitmen seç',
+                    noneResultsText: 'Hiçbir Sonuç Bulunamadı'
+                }).selectpicker('refresh');
+
+            }
+        })
+
+        $(".edit").click(function (e) {
+            e.preventDefault();
+
+            var Id = $(this).attr("data-edit");
+            let selectElement = $('select[name="trainerIdd[]"]').val();
+                      
+
+            var formData = new FormData();
+            formData.append("EducationName", $("#egitimAdi_" + Id).val());
+            formData.append("StartDate", $("#baslangicTarihi_" + Id).val());
+            formData.append("Image", $("#image_" + Id)[0].files[0]);
+
+            formData.append("Price", $("#fiyat_" + Id).val());
+            formData.append("Description", $("#aciklama_" + Id).val());
+
+
+            for (let i = 0; i < selectElement.length; i++) {
+                formData.append("trainerIdd[]", selectElement[i]);
+            }
+
+            $.ajax({
+                type: 'Post',
+                url: '/Control/Education/Edit/' + Id,
+                data: formData, // Doğru şekilde formData'yı data içine ekleyin
+                processData: false, // Bu özelliği ekleyin
+                contentType: false, // Bu özelliği ekleyin
+                success: function (res) {
+                    toastr.success('Eğitim başarılı bir şekilde düzenlendi.', '')
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                }
+            })
+
+        })
+
+        $(".kaydet").click(function (e) {
+            e.preventDefault();
+            let selectElement = $('select[name="trainerId[]"]').val();
+            console.log(selectElement);
+            var formData = new FormData();
+            formData.append("EducationName", $("#egitimAdi").val());
+            formData.append("StartDate", $("#baslangicTarihi").val());
+            formData.append("Price", $("#fiyat").val());
+            formData.append("Description", $("#aciklama").val());
+            //formData.append("educationId", $("#aciklama").val());
+            for (let i = 0; i < selectElement.length; i++) {
+                formData.append("trainerId[]", selectElement[i]);
+            }
+            formData.append("Image", $("#image")[0].files[0]);
+
+            $.ajax({
+                type: 'Post',
+                url: '/Control/Education/Add',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (res) {
+                    toastr.success('Eğitim başarılı bir şekilde eklendi.', '')
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                }
+            })
+        })
+
+        $(".user").click(function (e) {
+            e.preventDefault();
+            var educationId = $(this).attr("data-id");
+            $.ajax({
+                type: 'GET',
+                url: '/Control/Education/Participants/',
+                data: { educationId: educationId },
+                success: function (res) {
+                    $("#ogrenci_" + educationId).empty();
+                    console.log(res);
+                    var rowTh = $("<tr></tr>");
+                    rowTh.append("<th>" + "Adı" + "</th>");
+                    rowTh.append("<th>" + "Soyadı" + "</th>");
+                    rowTh.append("<th>" + "Telefon Numarası" + "</th>");
+                    rowTh.append("<th>" + "Mail" + "</th>");
+
+                    $("#ogrenci_" + educationId).append(rowTh);
+
+
+                    for (var i = 0; i < res.length; i++) {
+                        var data = res[i];
+
+                        var adi = data.name;
+                        var soyadi = data.surname;
+                        var telefon = data.phone;
+                        var mail = data.mail;
+
+
+                        var row = $("<tr></tr>");
+                        row.append("<td>" + adi + "</td>");
+                        row.append("<td>" + soyadi + "</td>");
+                        row.append("<td>" + telefon + "</td>");
+                        row.append("<td>" + mail + "</td>");
+
+                        $("#ogrenci_" + educationId).append(row);
+                    }
+                }
+            })
+        })
+
+        $(".useregitmen").click(function (e) {
+
+            e.preventDefault();
+            var educationId = $(this).attr("data-egitmenid");
+
+            $.ajax({
+                type: 'GET',
+                url: '/Control/Education/EducationTrainers/',
+                data: { educationId: educationId },
+                success: function (res) {
+
+                    $("#egitimcii_" + educationId).empty();
+                    console.log(res);
+                    var rowTh = $("<tr></tr>");
+                    rowTh.append("<th>" + "Adı" + "</th>");
+                    rowTh.append("<th>" + "Soyadı" + "</th>");
+                    rowTh.append("<th>" + "Telefon Numarası" + "</th>");
+                    rowTh.append("<th>" + "Mail" + "</th>");
+
+                    $("#egitimcii_" + educationId).append(rowTh);
+
+
+                    for (var i = 0; i < res.length; i++) {
+                        var data = res[i];
+
+                        var adi = data.name;
+                        var soyadi = data.surname;
+                        var telefon = data.phone;
+                        var mail = data.mail;
+
+
+                        var row = $("<tr></tr>");
+                        row.append("<td>" + adi + "</td>");
+                        row.append("<td>" + soyadi + "</td>");
+                        row.append("<td>" + telefon + "</td>");
+                        row.append("<td>" + mail + "</td>");
+
+                        $("#egitimcii_" + educationId).append(row);
+                    }
+                }
+            })
+        })
+
+        $(".editToggle").click(function (e) {
+            var Id = $(this).attr("data-editId");
+            e.preventDefault();
+            $.ajax({
+                type: 'Get',
+                url: '/Control/Education/SelectedTrainerList/' + Id,
+                success: function (res) {
+                    console.log(res);
+
+                    $(".egitmen").html(res)
+                    let selectElement = $('select[name="trainerIdd[]"]');
+
+                    selectElement.selectpicker({
+                        noneSelectedText: 'Eğitmen seç',
+                        noneResultsText: 'Hiçbir Sonuç Bulunamadı'
+                    }).selectpicker('refresh');
+
+
+
+                }
+            })
+        })
+
+        $(".sonlandir").click(function(e){
+            e.preventDefault();
+            var id = $(this).attr("data-finis");
+
+            $.ajax({
+                type:'Post',
+                url: '/Control/Education/FinishTraining/',
+                data:{Id:id},
+                success:function(res){
+                    toastr.success('Eğitim sonlandırıldı.', '')
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                }
+            })
+        })
+
+        
+
+    })
+</script>
+
