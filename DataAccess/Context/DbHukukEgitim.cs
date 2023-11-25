@@ -13,7 +13,7 @@ namespace DataAccess.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=217.116.199.169;database=HukukEgitim; TrustServerCertificate=True; Persist Security Info=True; User ID=HukukEgitim;Password=Piksel6650.; MultipleActiveResultSets=true;");
+            optionsBuilder.UseSqlServer("connection string");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
